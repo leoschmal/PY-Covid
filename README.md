@@ -4,8 +4,8 @@
 Leventando datos oficiales de casos positivos de Covid, particularmente en zona de Sta Fe y Entre Ríos.
 
 ## Ejemplos
-![Entre Ríos](https://github.com/leoschmal/PY-Covid/Images/COVID-ER.jpg)
-![Santa Fe](https://github.com/leoschmal/PY-Covid/Images/COVID-SF.jpg)
+![Entre Ríos](https://leoschmal.github.io/leoschmal/PY-Covid/Images/COVID-ER.jpg)
+![Santa Fe](https://leoschmal.github.com/leoschmal/PY-Covid/Images/COVID-SF.jpg)
 ![Santa Fe y Entre Ríos](https://github.com/leoschmal/PY-Covid/Images/COVID-SF&ER.jpg)
 
 
