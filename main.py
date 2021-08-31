@@ -6,6 +6,7 @@ Created on Mon Sep 14 18:23:02 2020
 """
 import pandas as pd
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
 import matplotlib.dates as mdates
@@ -26,9 +27,6 @@ print(cant)
 
 print(geo.head())
 
-
-
-
 def EntreRios():
     #-----------------------Entre Rios ----------------------------------------
     #Filtro los datos de Entre Ríos
@@ -47,10 +45,10 @@ def EntreRios():
     ax1.tick_params(axis='y', labelcolor='b')
     
     
-    #set ticks every week
+    #seteo por cada semana
     ax.set_title('ENTRE RÍOS - Casos por Día & Acumulados', fontsize = 17)
     ax.xaxis.set_major_locator(mdates.MonthLocator())
-    #set major ticks format
+    
     ax.xaxis.set_major_formatter(mdates.DateFormatter('%b'))
     ax.set_xlabel('Fecha')
     ax.set_ylabel('Casos Diarios', color='r')
@@ -83,10 +81,9 @@ def SantaFe():
     ax1.tick_params(axis='y', labelcolor='b')
     
     
-    #set ticks every week
     ax.set_title('SANTA FE - Casos por Día & Acumulados', fontsize = 17)
     ax.xaxis.set_major_locator(mdates.MonthLocator())
-    #set major ticks format
+
     ax.xaxis.set_major_formatter(mdates.DateFormatter('%b'))
     ax.set_xlabel('Fecha')
     ax.set_ylabel('Casos Diarios', color='r')
@@ -122,7 +119,7 @@ def AcumStaFeEntreRios():
     
     ax.set_title('SANTA FE & ENTRE RÍOS - Casos Acumulados', fontsize = 17)
     ax.xaxis.set_major_locator(mdates.MonthLocator())
-    #set major ticks format
+
     ax.xaxis.set_major_formatter(mdates.DateFormatter('%b'))
     ax.set_xlabel('Fecha')
     #ax.tick_params(axis='y')
@@ -148,10 +145,9 @@ def CasosParana():
     ax.plot(parana.index, parana['Acumulados'], color='r', label='Positivos')
     ax.tick_params(axis='y', labelcolor='b')
 
-    #set ticks every week
     ax.set_title('PARANÁ - Casos Positivos', fontsize = 17)
     ax.xaxis.set_major_locator(mdates.MonthLocator())
-    #set major ticks format
+
     ax.xaxis.set_major_formatter(mdates.DateFormatter('%b'))
     ax.set_xlabel('Fecha')
     
@@ -186,10 +182,8 @@ def Test_ContER():
     ax.tick_params(axis='y', labelcolor='b')
     
     
-    #set ticks every week
     ax.set_title('ENTRE RÍOS - Casos Positivos & Test Realizados', fontsize = 17)
     ax.xaxis.set_major_locator(mdates.MonthLocator())
-    #set major ticks format
     ax.xaxis.set_major_formatter(mdates.DateFormatter('%b'))
     ax.set_xlabel('Fecha')
     
@@ -209,7 +203,9 @@ print('Generar Graficas de estado de casos de Covid-19')
 print('''Seleccione Región: 
       1-Entre Ríos - Casos Diarios y Acumulados
       2- Santa Fe - Casos Diarios y Acumulados
-      3- Rosario''')
+      3- Acumulado Sta FE y Entre Ríos
+      4- Test Entre Ríos
+      5- Paraná''')
 selector=str
 selector= int(input('ingrese opcion:'))
 if selector==1:
